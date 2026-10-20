@@ -1,0 +1,30 @@
+{
+  "engine": "SQLite",
+  "repetitions": 30,
+  "warm_cache": true,
+  "before": {
+    "median_ms": 2.300299995113164,
+    "plan": [
+      [
+        3,
+        0,
+        216,
+        "SCAN fact_experiment"
+      ]
+    ],
+    "matching_rows": 4372
+  },
+  "after": {
+    "median_ms": 0.29364999500103295,
+    "plan": [
+      [
+        3,
+        0,
+        151,
+        "SEARCH fact_experiment USING COVERING INDEX ix_fact_experiment_date (assigned_date>? AND assigned_date<?)"
+      ]
+    ],
+    "matching_rows": 4372
+  },
+  "limitation": "Small local synthetic data. No production speedup claim."
+}

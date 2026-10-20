@@ -1,0 +1,2 @@
+// Name this query fact_experiment
+let Source = fnLoadCSV("fact_experiment.csv", {{"user_id", Int64.Type}, {"assigned_date", type date}, {"converted", Int64.Type}, {"crashed", Int64.Type}, {"revenue_usd", Currency.Type}}) in Source

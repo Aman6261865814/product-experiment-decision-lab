@@ -1,0 +1,9 @@
+// Create each measure separately. DAX definitions are supplied, not Desktop-validated.
+Users = COUNTROWS(fact_experiment)
+Conversions = SUM(fact_experiment[converted])
+Conversion Rate = DIVIDE([Conversions], [Users])
+Crash Rate = DIVIDE(SUM(fact_experiment[crashed]), [Users])
+Revenue Per User = DIVIDE(SUM(fact_experiment[revenue_usd]), [Users])
+Control Conversion = CALCULATE([Conversion Rate], REMOVEFILTERS(fact_experiment[variant]), fact_experiment[variant] = "control")
+Treatment Conversion = CALCULATE([Conversion Rate], REMOVEFILTERS(fact_experiment[variant]), fact_experiment[variant] = "treatment")
+Conversion Delta pp = 100 * ([Treatment Conversion] - [Control Conversion])

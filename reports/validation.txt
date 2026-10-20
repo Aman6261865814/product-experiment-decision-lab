@@ -1,0 +1,13 @@
+test_conflicting_duplicates_rejected (test_contracts.DataContractTests.test_conflicting_duplicates_rejected) ... ok
+test_exact_retry_removed (test_contracts.DataContractTests.test_exact_retry_removed) ... ok
+test_null_key_rejected (test_contracts.DataContractTests.test_null_key_rejected) ... ok
+test_randomization_unit (test_contracts.DataContractTests.test_randomization_unit) ... ok
+test_sql_python_parity (test_contracts.DataContractTests.test_sql_python_parity) ... ok
+test_srm_blocks_launch (test_contracts.DataContractTests.test_srm_blocks_launch) ... ok
+test_swap_arms_flips_effect (test_contracts.DataContractTests.test_swap_arms_flips_effect) ... ok
+test_zero_effect_does_not_ship (test_contracts.DataContractTests.test_zero_effect_does_not_ship) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.114s
+
+OK

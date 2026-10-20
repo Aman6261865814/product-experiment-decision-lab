@@ -1,0 +1,5 @@
+variant,device,users,conversions
+control,desktop,8275,1012
+control,mobile,6815,834
+treatment,desktop,8096,1126
+treatment,mobile,6814,963
